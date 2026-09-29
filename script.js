@@ -46,7 +46,7 @@ function startCheck(){
 
     if(score === null){ // If user clicked Cancel
         alert("[SYSTEM]: Operation cancelled by the user.");
-        return null;
+        return;
     }
     
     // Using function to evaluate score
