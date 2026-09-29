@@ -62,7 +62,7 @@ function startCheck(){
             document.getElementById("remark").innerText = "✕ FAILED ✕";
         }
     }
-    else{
+    else{ // If user clicked Cancel
         alert("Operation cancelled by the user.");
         return;
     }
