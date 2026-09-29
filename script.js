@@ -1,6 +1,6 @@
 // Function to show welcome message
 function showWelcomeMessage() {
-    alert("WELCOME  !\n\nWelcome to the Student Result System. Use this webpage to check your academic result based on your score.");
+    alert("WELCOME!\n\nWelcome to the Student Result System. Use this webpage to check your academic result based on your score.");
 }
 
 // Function to start check; It uses prompt() and confirm()
