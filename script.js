@@ -7,11 +7,7 @@ function showWelcomeMessage() {
 function evaluateScore(score){
 
     // Score validation using if and else-if
-    if(score === null){ // If user clicked Cancel
-        alert("[SYSTEM]: Operation cancelled by the user.");
-        return;
-    }
-    else if (score === "") { // If score is empty
+    if (score === "") { // If score is empty
         alert("[MISSING INPUT]: Score cannot be empty.");
         return;
     }
@@ -48,6 +44,11 @@ function startCheck(){
     // Getting score using prompt()
     let score = prompt("Please enter your score (1 - 100): ");
 
+    if(score === null){ // If user clicked Cancel
+        alert("[SYSTEM]: Operation cancelled by the user.");
+        return null;
+    }
+    
     // Using function to evaluate score
     evaluateScore(score);
 
