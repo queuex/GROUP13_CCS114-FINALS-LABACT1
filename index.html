@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Result System</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="topbar">
+            <div class="title">
+                <h1>Student Result System ✓</h1>
+                <p>CCS114 - Web Technologies</p>
+            </div>
+            <button type="button" id="welcomeButton" onclick="showWelcomeMessage()">Show Welcome Message</button>
+        </div>
+        <hr>
+      </header>
+
+      <main>
+        <aside>
+            <section class="instructions">
+                <h2 class="title">Instructions</h2>
+                <ol>
+                    <li>Click the Start Checking button.</li>
+                    <li>Enter your name and score.</li>
+                    <li>Confirm if you want to proceed.</li>
+                    <li>View your result on the webpage.</li>
+                </ol>
+                </section>
+
+                <section class="grading">
+                <h2 class="title">Grading Scale</h2>
+
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Score Range</th>
+                        <th>Remark</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>90 - 100</td>
+                        <td>Excellent</td>
+                    </tr>
+                    <tr>
+                        <td>75 - 89</td>
+                        <td>Passed</td>
+                    </tr>
+                    <tr>
+                        <td>Below 75</td>
+                        <td>Failed</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+        </aside>
+        <hr>
+        <section class="check-result">
+          <h2 class="title">Check Your Result</h2>
+          <p>
+            Click the button below to start checking your academic performance.
+          </p>
+
+          
+          <button type="button" id="checkButton" onclick="startCheck()">Start Checking</button>
+          <div class="result">
+            <div class="information">
+                <p id="name">Name: N/A</p>
+                <hr>
+                <p id="score">Score: N/A</p>
+            </div>
+            <h2 id="remark">INVALID INPUT</h2>
+          </div>
+        </section>
+
+      </main>
+      <hr>
+      <footer class="footer">
+        <p>Abila, John Ryan L. | Fernandez, Joseph Martine E. | Serrano, Kweenee Jen B.</p>
+        <div id="project-info">
+          <h4>Finals Laboratory  1</h4> <hr>
+          <p><strong>Section:</strong> 2BSIT-B GROUP 13</p> <hr>
+          <p><strong>Professor:</strong> Prof. Albert Q. Alforja</p>
+        </div>
+        
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
