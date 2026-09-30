@@ -60,10 +60,10 @@ function startCheck(){
         document.getElementById("score").innerText = "Score: " + score;
 
         // Score remarks if, else if, and else.
-        if(score > 90){ // Excellent
+        if(score >= 90){ // Excellent
             document.getElementById("remark").innerText = "⁜ EXCELLENT ⁜";
         }
-        else if(score > 75){ // Passed
+        else if(score >= 75){ // Passed
             document.getElementById("remark").innerText = "✓ PASSED ✓";
         }
         else{ // Failed
