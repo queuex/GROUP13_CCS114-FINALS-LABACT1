@@ -5,23 +5,15 @@ function showWelcomeMessage() {
 
 // Function to evaluate score
 function evaluateScore(score){
-
-    // Score validation using if and else-if
-    if (score === "") { // If score is empty
-        alert("[MISSING INPUT]: Score cannot be empty.");
-        return;
+    // Score remarks using if, else if, and else.
+    if(score >= 90){ // Excellent
+    document.getElementById("remark").innerText = "⁜ EXCELLENT ⁜";
     }
-    else if(isNaN(score)){ // If score is not a number
-        alert("[INVALID INPUT]: Score can only be a number.");
-        return;
-    } 
-    else if(score < 0){ // If score is negative value
-        alert("[INVALID INPUT]: Score cannot be negative value.");
-        return;
+    else if(score >= 75){ // Passed
+        document.getElementById("remark").innerText = "✓ PASSED ✓";
     }
-    else if(score > 100){ // If score is beyond 100
-        alert("[INVALID INPUT]: Score cannot exceed to 100.");
-        return;
+    else{ // Failed
+        document.getElementById("remark").innerText = "✕ FAILED ✕";
     }
 }
 
@@ -44,13 +36,27 @@ function startCheck(){
     // Getting score using prompt()
     let score = prompt("Please enter your score (1 - 100): ");
 
+    // Score validation using if and else-if
     if(score === null){ // If user clicked Cancel
         alert("[SYSTEM]: Operation cancelled by the user.");
         return;
     }
-    
-    // Using function to evaluate score
-    evaluateScore(score);
+    else if (score === "") { // If score is empty
+        alert("[MISSING INPUT]: Score cannot be empty.");
+        return;
+    }
+    else if(isNaN(score)){ // If score is not a number
+        alert("[INVALID INPUT]: Score can only be a number.");
+        return;
+    } 
+    else if(score < 0){ // If score is negative value
+        alert("[INVALID INPUT]: Score cannot be negative value.");
+        return;
+    }
+    else if(score > 100){ // If score is beyond 100
+        alert("[INVALID INPUT]: Score cannot exceed to 100.");
+        return;
+    }
 
     // Asking user to proceed using confirm()
     if(confirm("Do you want to proceed with evaluating your score?")){
@@ -59,16 +65,8 @@ function startCheck(){
         document.getElementById("name").innerText = "Name: " + name;
         document.getElementById("score").innerText = "Score: " + score;
 
-        // Score remarks if, else if, and else.
-        if(score >= 90){ // Excellent
-            document.getElementById("remark").innerText = "⁜ EXCELLENT ⁜";
-        }
-        else if(score >= 75){ // Passed
-            document.getElementById("remark").innerText = "✓ PASSED ✓";
-        }
-        else{ // Failed
-            document.getElementById("remark").innerText = "✕ FAILED ✕";
-        }
+        // Evaluating score using a funtion evaluateScore();
+        evaluateScore(score);
     }
     else{ // If user clicked Cancel
         alert("Operation cancelled by the user.");
@@ -76,5 +74,5 @@ function startCheck(){
     }
 }
 
-// Show welcome message automatically
+// Show welcome message initially
 showWelcomeMessage();
